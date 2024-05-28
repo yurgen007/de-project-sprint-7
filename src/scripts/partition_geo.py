@@ -28,7 +28,7 @@ def main():
 
 
     events.write.option("header",True) \
-            .partitionBy("date", "event_type") \
+            .partitionBy("event_type") \
             .mode("overwrite") \
             .parquet(f'{base_output_path}/date={date}') 
     
